@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 23 10:52:50 2025
-
-@author: ozubr
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
@@ -176,3 +169,4 @@ draw_map(
     extent=[8, 20, 54, 65],
     country_labels={"Szwecja": (60, 15)}
 )
+
