@@ -147,3 +147,44 @@ Dla każdej stacji GNSS przedstawiono wartości RMS wyznaczone oddzielnie dla tr
 - Identyczną procedurę wizualizacji zastosowano **analogicznie dla drugiego okresu obserwacyjnego (DOY 284–286)**.
 
 Ze względu na powtarzalność metodyki w repozytorium zaprezentowano przykładową realizację dla jednego okresu obserwacji.
+
+---
+
+### 7. **wykresy_ROT_ROTI.py**
+Skrypt służy do wyznaczania wskaźników:
+- **ROT (Rate of TEC)**,
+- **ROTI (Rate Of TEC Index)**,
+na podstawie danych TEC pozyskanych z plików obserwacyjnych GNSS.
+
+### Dane wejściowe
+- pliki '.Cmn' wygenerowane w aplikacji **GPS-TEC analysis program (ver. 3.5)**.
+
+### Metodyka obliczeń
+1. Z plików '.Cmn' wczytywane są wartości **VTEC** dla kolejnych epok pomiarowych.
+2. Wskaźnik **ROT** obliczany jest jako różnica kolejnych wartości VTEC przy kroku czasowym 30 s.
+3. Wskaźnik **ROTI** obliczany jest jako odchylenie standardowe wartości ROT oknie 5-minutowym (10 epok).
+4. Dane z trzech kolejnych dni obserwacyjnych są łączone w jeden ciąg czasowy oraz jest generowany wykres.
+
+### Zakres analizy
+- okresy czasowe:
+  - **DOY 131–133**,
+  - **DOY 284–286**,
+- stacje referencyjne:
+  - **SPT700SWE**,
+  - **MADR00ESP**,
+  - **NODW00POL**.
+
+### Wizualizacja wyników
+Wykresy punktowe przedstawiają przebieg **ROT** oraz przebieg **ROTI**:
+- pionowe linie przerywane wyznaczają granice kolejnych dni obserwacyjnych,
+- osie czasu przedstawione są w godzinach (0–72 h).
+
+### Uwagi
+- Zaprezentowany skrypt stanowi przykład realizacji procedury
+  dla stacji **SPT700SWE** w okresie **DOY 131–133**.
+- **Analogiczna procedura obliczeniowa i wizualizacyjna została wykonana**
+  dla pozostałych stacji referencyjnych (**MADR00ESP**, **NODW00POL**)
+  oraz dla drugiego okresu obserwacyjnego (**DOY 284–286**).
+
+W repozytorium zaprezentowano jeden przyj=kład, ponieważ, metodyka obliczeń ROT i ROTI była identyczna we wszystkich analizowanych przypadkach.
+
