@@ -1,4 +1,4 @@
-# Wykorzystane programy:
+# Wykorzystane programy
 Repozytorium zawiera programy w języku Python do analizy danych GNSS i wyznaczania wskaźników ROT/ROTI, z wizualizacją czasową i mapową. Wszystkie materiały udostępnione na licencji CC BY 4.0.
 
 ---
