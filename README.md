@@ -186,5 +186,5 @@ Wykresy punktowe przedstawiają przebieg **ROT** oraz przebieg **ROTI**:
   dla pozostałych stacji referencyjnych (**MADR00ESP**, **NODW00POL**)
   oraz dla drugiego okresu obserwacyjnego (**DOY 284–286**).
 
-W repozytorium zaprezentowano jeden przyj=kład, ponieważ, metodyka obliczeń ROT i ROTI była identyczna we wszystkich analizowanych przypadkach.
+W repozytorium zaprezentowano jeden przykład, ponieważ, metodyka obliczeń ROT i ROTI była identyczna we wszystkich analizowanych przypadkach.
 
