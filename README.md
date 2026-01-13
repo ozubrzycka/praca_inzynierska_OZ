@@ -85,4 +85,31 @@ Ze względu na powtarzalnosć procedury, w repozytorium przedstawiono wybrane pr
 
 ---
 
-### 5. ** **
+### 5. **RMS_h_v.py**
+Skrypt służy do obliczania błędów RMS – Root Mean Square składowych **E (East)**, **N (North)** oraz **U (Up)** współrzędnych topocentrycznych stacji GNSS względem ich pozycji referencyjnych.
+
+### Zakres analizy
+- analizowane składowe: **E, N, U**,
+- wyznaczane wskaźniki:
+  - **RMS_H** – błąd poziomy,
+  - **RMS_V** – błąd pionowy,
+- okresy obserwacyjne:
+  - **DOY 131-133**,
+  - **DOY 284–286**,
+- dane wejściowe: pliki CSV zawierające współrzędne ENU w interwale 30 s.
+
+### Metodyka obliczeń
+Dla każdej stacji i każdego dnia:
+1. Wczytano współrzędne topocentryczne E, N, U.
+2. Obliczono odchylenia względem wartości referencyjnych.
+3. Wyznaczono błędy RMS składowych E, N oraz U.
+4. Obliczono błędy RMS poziomy (**RMS_H**) i pionowy (**RMS_V**).
+
+### Uwagi
+- Identyczną procedurę obliczeniową zastosowano dla **obu analizowanych okresów pomiarowych (DOY 131–133 oraz DOY 284–286)**.
+- Metodykę wykorzystano analogicznie dla **wszystkich zestawów stacji GNSS**:
+  1. **Hiszpania**: CEBR00ESP, VILL00ESP, TOR100ESP,
+  2. **Polska**: BOGO00POL, JOZ200POL, MIMA00POL,
+  3. **Szwecja**: HOA000SWE, TJU000SWE, ONSA00SWE.
+
+Ze względu na powtarzalność obliczeń w repozytorium przedstawiono przykładowy skrypt dla jednego zestawu stacji w jednym analizowanym okresie.
