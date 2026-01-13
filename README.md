@@ -6,7 +6,7 @@ Repozytorium zawiera programy w języku Python do analizy danych GNSS i wyznacza
 ## Zawartość repozytorium 
 
 ### 1. **mapy.py**
-Skrypt konwertuje współrzędne **ECEF (XYZ)** na współrzędne geodezyjne **(szerokość, długośc, wysokość)** oraz rysuje mapy rozmieszczenia stacji GNSS dla wybranych obszarów Europy (Polsce, Europie i Szwecji).
+Skrypt konwertuje współrzędne **ECEF (XYZ)** na współrzędne geodezyjne **(szerokość, długość, wysokość)** oraz rysuje mapy rozmieszczenia stacji GNSS dla wybranych obszarów Europy (Polsce, Europie i Szwecji).
 
 **Funkcjonalność:***
 - Funkcja 'xyz2latlonh(X, Y, Z)' - konwersja XYZ --> lat/lon/h metodą Hirvonena,
