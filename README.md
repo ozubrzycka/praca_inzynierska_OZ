@@ -58,4 +58,31 @@ Ze względu na powtarzalność procedury obliczeniowej, w repozytorium przedstaw
 
 ---
 
-### 4. ** **
+### 4. **wykresy_EN.py**
+Skrypt realizuje analizę rozrzutu odchyleń współrzędnych topocentrycznych **E (East)** i **N (North)** względem wartości referencyjnej dla stacji GNSS.
+Odchylenia współrzędnych zostały wyznczone w lokalnym układzie ENU względem stacji referencyjnej, a następnie przedstawione w postaci wykresów punktowych **E-N**.
+
+### Zakres analizy do wykresu:
+- analizowane skłądowe: **E oraz N**,
+- okresy obserwacyjne:
+  - **DOY 131–133**,
+  - **DOY 284–286**,  
+- krok czasowy danych: **30 sekund**,  
+- dane wejściowe: pliki CSV zawierające współrzędne ENU.
+
+  ### Metodyka:
+- dla każdej stacji obliczono różnice składowych E i N względem ich wartości referencyjnych,
+- dla każdego dnia oraz każdej stacji wygenerowano wykres rozrzutu **σE–σN** (razem 18 wykresów),
+- wszystkie wykresy przedstawiono z identycznym zakresem osi, co umożliwia bezpośrednie porównanie rozwiązań GNSS.
+
+### Uwagi
+- Identyczną procedurę obliczeniową zastosowano dla **wszystkich analizowanych zestawów stacji GNSS**:
+  1. **Hiszpania**: CEBR00ESP, VILL00ESP, TOR100ESP,
+  2. **Polska**: BOGO00POL, JOZ200POL, MIMA00POL,
+  3. **Szwecja**: HOA000SWE, TJU000SWE, ONSA00SWE.
+
+Ze względu na powtarzalnosć procedury, w repozytorium przedstawiono wybrane przykłądy wykresów.
+
+---
+
+### 5. ** **
