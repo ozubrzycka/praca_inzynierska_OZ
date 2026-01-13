@@ -113,3 +113,37 @@ Dla każdej stacji i każdego dnia:
   3. **Szwecja**: HOA000SWE, TJU000SWE, ONSA00SWE.
 
 Ze względu na powtarzalność obliczeń w repozytorium przedstawiono przykładowy skrypt dla jednego zestawu stacji w jednym analizowanym okresie.
+
+---
+
+### 6. **wykresy_RMS.py**
+Skrypt służy do graficznej prezentacji błędów RMS pozycji GNSS w postaci wykresów słupkowych:
+- **RMS_H** – błąd pozycji poziomej,
+- **RMS_V** – błąd pozycji wysokościowej.
+
+Dla każdej stacji GNSS przedstawiono wartości RMS wyznaczone oddzielnie dla trzech kolejnych dni obserwacyjnych.
+
+### Dane wejściowe
+- wartości **RMS_H** oraz **RMS_V** obliczone na podstawie skryptu 'RMS_h_v.py',
+- dane zestawione w postaci macierzy.
+
+### Zakres analizy
+- okres obserwacyjny:
+  - **DOY 131–133**,
+  - **DOY 284–286**,
+- analizowane stacje GNSS:
+  - **CEBR00ESP, VILL00ESP, TOR100ESP**,
+  - **BOGO00POL, JOZ200POL, MIMA00POL**,
+  - **HOA000SWE, TJU000SWE, ONSA00SWE**.
+
+### Opis wykresów
+- wykresy słupkowe przedstawiają wartości RMS dla poszczególnych dni,
+- kolory słupków odpowiadają kolejnym dniom obserwacyjnym,
+- osobno zaprezentowano:
+  - błędy pozycji poziomej (**RMS_H**),
+  - błędy pozycji pionowej (**RMS_V**).
+
+### Uwagi
+- Identyczną procedurę wizualizacji zastosowano **analogicznie dla drugiego okresu obserwacyjnego (DOY 284–286)**.
+
+Ze względu na powtarzalność metodyki w repozytorium zaprezentowano przykładową realizację dla jednego okresu obserwacji.
