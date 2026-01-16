@@ -32,29 +32,25 @@ Obliczenia w skrypcie są wykonane na przykładzie:
 
 ---
 
-### 3. **wykresy_sigmaENU.py**
-Skrypt przedstawia analizę odchyleń współrzędnych topocentrycznych **ENU** względem pozycji referencyjnej stacji bazowej wraz z generowaniem wykresu. W przykładzie znajduje się algorytm dla odchyleń **składowej pólnocnej N**, na przykładzie stacji w Szwecji: **HOA000SWE, TJU000SWE, ONSA00SWE**.
+### 3. **wykresy_sigmaENU.py** oraz **wykresyENU_pol_284_6.py**
+Skrypt przedstawiają analizę odchyleń współrzędnych topocentrycznych **ENU (East, North, Up)** względem pozycji referencyjnej stacji bazowych GNSS wraz z generowaniem wykresów czasowych. Wyniki przedstawiono w formie wykresó czasowych obejmujących trzy kolejne dni obserwacyjne, z zachowaniem podziału na granice dobowe.
 
-### Zakresy analizy do wykresu:
-- okres obserwacyjny: 3 dni (w przykładzie DOY: 284, 285, 286),
-- interwał czasowy danych: 30 sekund,
-- dane wejściowe: pliki CSV ze współrzednymi ENU wygenerowane na podstawie danych GNSS,
-- wyniki przedstawiono w formie wykresu jako ciąg czasowy połączony z trzech kolejnych dni.
+### Zakres analizy
+Skrypty zostały wykorzystane do analizy stacji:
+- 'wykresy_sigmaENU.py' - stacje Europy południowej: CEBR00ESP, VILL00ESP, TOR100ESP, stacje Europy północnej: HOA000SWE, TJU00SWE, ONSA00SWE w dwóch okresach obserwacyjnych: **DOY 131-133** i **DOY 284-286** oraz w pierwszym okresie obserwacyjnym **DOY 131-133** dla stacji Europy centralnej: BOGO00POL, JOZ200POL, MIMA00POL,
+- 'wykresyENU_pol_284_6.py' - drugi okres obserwacyjny **DOY 284-286** dla stacji Europy centralnej: BOGO00POL, JOZ200POL, MIMA00POL, ze względu na brak danych obserwacyjnych w godzinach 13:29:30 - 19:00:00 w dniu o DOY 285.
+
+### Dane wejściowe
+- pliki CSV ze współrzednymi, wygenerowane na podstawie skryptu 'xyz2enyu.py'.
 
 ### Metodyka:
-- dla każdej stacji wyznaczono różnice pomiędzy składową N a jej wartością referencyjną,
-- dane z trzech dni połaczono w jeden ciąg czasowy,
-- wyniki zwizualizowano w funkcji czasu, z zaznaczonym podziałem na poszczególne dni obserwacyjne.
+1. Obliczono różnice pomiędzy składowymi ENU a ich wartościami referencyjnymi.
+2. Połączono dane z trzech kolejnych dni w jeden ciąg czasowy.
+3. Oś czasu wyznaczono w godzinach (oznaczonych co trzecia), z zachowaniem ciągłości pomiędzy kolejnymi dobami.
+4. Wyniki zwizualizowano w formie 3 wykresów, dla każdej skłądowej, a stacje rozróżniono kolorami zgodnie z legendą.
 
 ### Uwagi:
-- Analogiczne oblicznenia i wizualizacje wykonano dla pozostałych składowych układu ENU (E oraz U).
-- Analizę przeprowadzono również dla drugiego okresu pomiarowego: DOY 131, 132, 133.
-- Analogiczną procedurę obliczeniową zastoowano dla pozostałych zestawów stacji GNSS:
-  1. **Hiszpania**: CEBR00ESP, VILL00ESP, TOR100ESP,
-  2. **Polska**: BOGO00POL, JOZ200POL, MIMA00POL,
-  3. **Szwecja**: HOA000SWE, TJU000SWE, ONSA00SWE.
-
-Ze względu na powtarzalność procedury obliczeniowej, w repozytorium przedstawiono wybrany przykład. 
+Ze względu na powtarzalność procedury, w przypadku skryptu 'wykresy_sigmaENU.py' zaprezentowano jeden przykłąd dotyczący stacji Europy północnej w okresie **DOY 131-133**, ponieważ analogiczą procedurę wykonano dla pozostałych stacji i okresów. Dla stacji Europy centralnej w okresie **DOY 284-286** (skrypt 'fixed_float_pol_284_6.py'), zaprezentowano konkretny przykład, ponieważ wyróżniał się on "luką" w danych. 
 
 ---
 
