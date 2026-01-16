@@ -141,8 +141,8 @@ Dla każdej stacji GNSS przedstawiono wartości RMS wyznaczone oddzielnie dla tr
 
 ---
 
-### 7. **wykresy_ROT_ROTI.py**
-Skrypt służy do wyznaczania wskaźników:
+### 7. **wykresy_ROT_ROTI.py** i **wykresy_rot_roti_NODW_284_6.py***
+Skrypty służą do wyznaczania wskaźników:
 - **ROT (Rate of TEC)**,
 - **ROTI (Rate Of TEC Index)**,
 na podstawie danych TEC pozyskanych z plików obserwacyjnych GNSS.
@@ -156,14 +156,13 @@ na podstawie danych TEC pozyskanych z plików obserwacyjnych GNSS.
 3. Wskaźnik **ROTI** obliczany jest jako odchylenie standardowe wartości ROT oknie 5-minutowym (10 epok).
 4. Dane z trzech kolejnych dni obserwacyjnych są łączone w jeden ciąg czasowy oraz jest generowany wykres.
 
-### Zakres analizy
-- okresy czasowe:
-  - **DOY 131–133**,
-  - **DOY 284–286**,
-- stacje referencyjne:
-  - **SPT700SWE**,
-  - **MADR00ESP**,
-  - **NODW00POL**.
+### Zakres analizy - okresy czasowe i stacje referencyjne
+Skrypt 'wykresy_ROT_ROTI.py'
+  - **DOY 131–133**: **MADR00ESP**, **NODW00POL**, **SPT700SWE**,
+  - **DOY 284–286**: **MADR00ESP**, **SPT700SWE**
+
+Skrypt 'wykresy_rot_roti_NODW_284_6.py'
+- **DOY 284-286**: NODW00POL - skrypt generuje wykres z pominięciem obszaru na wykresie, ze względu na 'lukę' w danych obserwacyjnych pomiędzy 13:29:30 a 19:00:00.
 
 ### Wizualizacja wyników
 Wykresy punktowe przedstawiają przebieg **ROT** oraz przebieg **ROTI**:
@@ -172,12 +171,12 @@ Wykresy punktowe przedstawiają przebieg **ROT** oraz przebieg **ROTI**:
 
 ### Uwagi
 - Zaprezentowany skrypt stanowi przykład realizacji procedury
-  dla stacji **SPT700SWE** w okresie **DOY 131–133**.
+  dla stacji **SPT700SWE** w okresie **DOY 131–133** oraz dla stacji **NODW00POL** w okresie **DOY 284-286**. 
 - **Analogiczna procedura obliczeniowa i wizualizacyjna została wykonana**
   dla pozostałych stacji referencyjnych (**MADR00ESP**, **NODW00POL**)
   oraz dla drugiego okresu obserwacyjnego (**DOY 284–286**).
 
-W repozytorium zaprezentowano jeden przykład, ponieważ, metodyka obliczeń ROT i ROTI była identyczna we wszystkich analizowanych przypadkach.
+W repozytorium zaprezentowano dwa przykłady, ponieważ, metodyka obliczeń ROT i ROTI była identyczna we wszystkich analizowanych przypadkach.
 
 ---
 ### 8. **fixed_float.py** oraz **fixed_float_pol_284_6.py**
