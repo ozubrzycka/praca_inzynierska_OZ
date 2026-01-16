@@ -32,7 +32,7 @@ Obliczenia w skrypcie są wykonane na przykładzie:
 
 ---
 
-### 3. **wykresy_sigmaENU.py **
+### 3. **wykresy_sigmaENU.py**
 Skrypt przedstawia analizę odchyleń współrzędnych topocentrycznych **ENU** względem pozycji referencyjnej stacji bazowej wraz z generowaniem wykresu. W przykładzie znajduje się algorytm dla odchyleń **składowej pólnocnej N**, na przykładzie stacji w Szwecji: **HOA000SWE, TJU000SWE, ONSA00SWE**.
 
 ### Zakresy analizy do wykresu:
@@ -116,8 +116,8 @@ Ze względu na powtarzalność obliczeń w repozytorium przedstawiono przykłado
 
 ---
 
-### 6. **wykresy_RMS.py**
-Skrypt służy do graficznej prezentacji błędów RMS pozycji GNSS w postaci wykresów słupkowych:
+### 6. **wykresyRMS_131_3.py** oraz **wykresyRMS_284_6.py**
+Skrypty służą do graficznej prezentacji błędów RMS pozycji GNSS w postaci wykresów słupkowych:
 - **RMS_H** – błąd pozycji poziomej,
 - **RMS_V** – błąd pozycji wysokościowej.
 
@@ -129,8 +129,8 @@ Dla każdej stacji GNSS przedstawiono wartości RMS wyznaczone oddzielnie dla tr
 
 ### Zakres analizy
 - okres obserwacyjny:
-  - **DOY 131–133**,
-  - **DOY 284–286**,
+  - **DOY 131–133** - skrypt 'wykresyRMS_131_3.py',
+  - **DOY 284–286** - skrypt 'wykresyRMS_284_6.py',
 - analizowane stacje GNSS:
   - **CEBR00ESP, VILL00ESP, TOR100ESP**,
   - **BOGO00POL, JOZ200POL, MIMA00POL**,
@@ -142,11 +142,6 @@ Dla każdej stacji GNSS przedstawiono wartości RMS wyznaczone oddzielnie dla tr
 - osobno zaprezentowano:
   - błędy pozycji poziomej (**RMS_H**),
   - błędy pozycji pionowej (**RMS_V**).
-
-### Uwagi
-- Identyczną procedurę wizualizacji zastosowano **analogicznie dla drugiego okresu obserwacyjnego (DOY 284–286)**.
-
-Ze względu na powtarzalność metodyki w repozytorium zaprezentowano przykładową realizację dla jednego okresu obserwacji.
 
 ---
 
