@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 13 17:39:50 2026
-
-@author: ozubr
-"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -95,4 +89,5 @@ def plot_component_station(comp, ylabel):
 plot_component_station("E", "sigma E [m]")
 plot_component_station("N", "sigma N [m]")
 plot_component_station("U", "sigma U [m]")
+
 
