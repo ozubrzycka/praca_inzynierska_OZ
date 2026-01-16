@@ -183,3 +183,27 @@ Wykresy punktowe przedstawiają przebieg **ROT** oraz przebieg **ROTI**:
 
 W repozytorium zaprezentowano jeden przykład, ponieważ, metodyka obliczeń ROT i ROTI była identyczna we wszystkich analizowanych przypadkach.
 
+---
+### 8. **fixed_float.py** oraz **fixed_float_pol_284_6.py**
+Skrypty przedstawiają analizę odchyleń współrzędnych topocentrycznych **ENU (East, North, Up)** względem pozycji referencyjnej stacji bazowych GNSS oraz ich wizualizację w postaci wykresów czasowych z rozróżnieniem rozwiązań typu **FIXED** i **FLOAT**. Wyniki przedstawiono w formie wykresó czasowych z trzech dni, z zachowaniem podziąłu na granice czasowe dni. 
+
+### Zakres analizy
+Skrypty zostały wykorzystane do analizy stacji:
+- 'fixed_float.py' - stacje Europy południowej: CEBR00ESP, VILL00ESP, TOR100ESP, stacje Europy północnej: HOA000SWE, TJU00SWE, ONSA00SWE w dwóch okresach obserwacyjnych: **DOY 131-133** i **DOY 284-286** oraz w pierwszym okresie obserwacyjnym **DOY 131-133** dla stacji Europy centralnej: BOGO00POL, JOZ200POL, MIMA00POL,
+- 'fixed_float_pol_284_6.py' - drugi okres obserwacyjny **DOY 284-286** dla stacji Europy centralnej: BOGO00POL, JOZ200POL, MIMA00POL, ze względu na brak danych obserwacyjnych w godzinach 13:29:30 - 19:00:00 w dniu o DOY 285.
+
+### Dane wejściowe
+- pliki CSV ze współrzędnymi ENU wygenerowane na podstawie kodu 'xyz2enu.py',
+- pliki CSV zawierające informację o typie rozwiązania FIXED/FLOAT z programu **Trimble Busieness Center**.
+
+### Metodyka obliczeń 
+1. Dla każdej stacji obliczono różnice pomiędzy skłądowymi ENU, a ich wartościami referencyjnymi.
+2. Dane z trzech kolejnych dni zostały połączone w jeden ciąg czasowy.
+3. Punkty na wykresach oznaczono kolorami w zależności od rozwiązania FIXED/FLOAT:
+   - kolor zielony: rozwiązanie typu FIXED (różne odcienie dotyczą stacji opidanych w legendzie wykresu),
+   - kolor czarny: rozwiązanie FLOAT.
+
+### Uwagi
+- W przypadku skryptu 'fixed_float.py' zaprezentowano jeden przykłąd dotyczący stacji Europy północnej w okresie **DOY 131-133**, ponieważ analogiczą procedurę wykonano dla pozostałych stacji i okresów, oprócz stacji Europy centralnej w okresie **DOY 284-286** (skrypt 'fixed_float_pol_284_6.py').
+
+---
