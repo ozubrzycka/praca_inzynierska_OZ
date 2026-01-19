@@ -1,6 +1,6 @@
 import pandas as pd
 
-days_info = [284, 285, 286]
+days_info = [131, 132, 133]
 stations = ["HOA", "TJU", "ONSA"]
 
 results = {}
@@ -30,7 +30,7 @@ for doy in days_info:
             "Float (%)": float_ / total * 100
         }
 
-    # suma dla wszystkich stacji razem
+   
     total_all_day = total_fixed_day + total_float_day
     results[doy]["ALL"] = {
         "Fixed": total_fixed_day,
@@ -39,11 +39,8 @@ for doy in days_info:
         "Float (%)": total_float_day / total_all_day * 100
     }
 
-# Wyniki:
+# Wyniki: 
 for doy, data in results.items():
     print(f"\nDOY {doy}")
     for st, res in data.items():
-        print(
-            f"  {st}: Float {res['Float']} (liczba), "
-            f"Float {res['Float (%)']:.2f}%"
-        )
+        print(f"  {st}: Fixed {res['Fixed (%)']:.2f}% , Float {res['Float (%)']:.2f}%")
