@@ -202,3 +202,19 @@ Skrypty zostały wykorzystane do analizy stacji:
 - W przypadku skryptu 'fixed_float.py' zaprezentowano jeden przykłąd dotyczący stacji Europy północnej w okresie **DOY 131-133**, ponieważ analogiczą procedurę wykonano dla pozostałych stacji i okresów, oprócz stacji Europy centralnej w okresie **DOY 284-286** (skrypt 'fixed_float_pol_284_6.py').
 
 ---
+
+### 9. **procent_float.py**
+Skrypt analizuje pliki CSV z wynikami obserwacji GNSS (pliki z programu Trimble Business Center) i oblicza liczbę oraz procentowy udział rozwiązań typu Fixed i Float dla wybranych stacji i dni roku (DOY). Dodatkowo wyznaczany jest procentowy, zbiorczy udział wszytskich stacji w danym dniu. 
+
+### Dane wejściowe
+Skrypt oczekuje plików CSV, w których w kolumnie o nazwie 'GNSS Vector Observation.Solution Type' będzie zawarta wartość Fixed lub Float. 
+
+### Metodyka obliczeń
+Dla każdego podanego DOY (w skrypcie: 131, 132, 133) i każdej podanej stacji (w skrypcie: HOA000SWE, TJU000SWE, ONSA00SWE):
+1. Zliczane są rozwiązania FIXED.
+2. Wszytskie inne rozwiązania klasyfikowane są jako FLOAT.
+3. Obliczany jest procentowy udział obu typów rozwiązań.
+4. Obliczany jest procentowy udział wszytskich stacji w danym dniu (ALL).
+
+### Uwagi:
+W repozytorium zaprezentowano jeden przykłady dotyczący stacji z regionu północnego: HOA000SWE, TJU000SWE, ONSA00SWE w dniach o DOY: 131, 132, 133. Obliczenia zostały wykonane również dla pozostałych dwóch zbiorów stacji: BOGO00POL, JOZ200POL, MIMA00POL oraz CEBR00ESP, VIL00ESP, TOR100ESP, w dwóch okresach czasowych: DOY 131, 132, 133 oraz 284, 285, 286. Ze względu na analogiczną metodykę obliczeń w repozytorium zaprezentowano jeden przykład. 
